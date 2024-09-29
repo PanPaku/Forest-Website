@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forest</title>
+		<link rel="stylesheet" href="dist/css/contact.min.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+			rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/336bb66908.js" crossorigin="anonymous"></script>
+		<link href="dist/css/hamburger.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<section class="nav-section wrapper">
+			<div class="nav-section-logo"><i class="fa-solid fa-tree"></i>Forest</div>
+			<button class="burger-btn">
+				<div class="burger-box">
+					<div class="burger-bars"></div>
+				</div>
+			</button>
+			<div class="nav-section-navigation-mobile mobile" id="mobileNav">
+				<div class="nav-section-navigation-mobile-hyperlink">
+					<a href="./index.html#header">Home</a>
+					<a href="./index.html#aboutus">O nas</a>
+					<a href="./index.html#offers">Oferta</a>
+					<a href="./contact.html#contact">Kontakt</a>
+				</div>
+			</div>
+			<div class="nav-section-navigation-desktop" id="desktopNav">
+				<div class="nav-section-navigation-desktop-hyperlink">
+					<a href="./index.html#header">Home</a>
+					<a href="./index.html#aboutus">O nas</a>
+					<a href="./index.html#offers">Oferta</a>
+					<a href="./contact.html#contact">Kontakt</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="contact-section" id="contact">
+			<div class="contact-section-title section-heading">
+				<p>Kontakt</p>
+			</div>
+			<div class="contact-section-data">
+				<div class="contact-section-data-input-box">
+					<div class="contact-section-data-input-box-form">
+						<div class="contact-section-data-input-box-form-icon">
+							<i class="fa-regular fa-envelope"></i>
+						</div>
+						<label for="name"></label>
+						<input type="text" id="name" placeholder="Imię:" />
+						<label for="lastName"></label>
+						<input type="text" id="lastName" placeholder="Nazwisko:" />
+						<label for="email"></label>
+						<input type="email" id="email" placeholder="E-mail:" />
+						<label for="message"></label>
+						<textarea name="message" id="message" placeholder="Wiadomość:"></textarea>
+					</div>
+					<div class="contact-section-data-input-box-send">
+						<label for="button"></label>
+						<input type="submit" value="Wyślij" id="button" class="contact-section-input-box-send-button" />
+					</div>
+				</div>
+				<div class="contact-section-data-map">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56355.1935500761!2d19.858139377756377!3d50.01978553436729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1722859667825!5m2!1spl!2spl"
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer-section">
+			<div class="footer-section-links">
+				<div class="footer-section-links-link">
+					<h2 class="footer-section-links-link-title">O nas</h2>
+					<div class="footer-section-links-link-contains">
+						<a href="#">Historia</a>
+						<a href="#">Parki</a>
+						<a href="#">Opinie</a>
+					</div>
+				</div>
+				<div class="footer-section-links-link">
+					<h2 class="footer-section-links-link-title">Nasza firma</h2>
+					<div class="footer-section-links-link-contains">
+						<a href="#">Praca</a>
+						<a href="#">Kadry</a>
+						<a href="#">Zarząd</a>
+					</div>
+				</div>
+				<div class="footer-section-links-link">
+					<h2 class="footer-section-links-link-title">Dokumenty</h2>
+					<div class="footer-section-links-link-contains">
+						<a href="#">Wnioski</a>
+						<a href="#">Rezerwacje</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-section-logo"><i class="fa-solid fa-tree"></i> Forest</div>
+			<hr />
+			<div class="footer-section-text">
+				&copy; <span><span class="footer-section-text-year"></span> Forest Group Company Ltd.</span>
+			</div>
+		</footer>
+
+		<script src="./dist/js/script.min.js"></script>
+	</body>
+</html>

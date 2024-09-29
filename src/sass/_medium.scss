@@ -1,0 +1,91 @@
+@use './components' as *;
+
+@media (min-width: 768px) {
+	.header-section {
+		padding-left: 8em;
+	}
+
+	.section-heading {
+		margin-top: 1.4em;
+		margin-bottom: 1.4em;
+		font-size: 3.6rem;
+	}
+
+	.nav-section-navigation-desktop {
+		display: none;
+	}
+
+	.aboutus-section {
+		.aboutus-section-contents-text {
+			.aboutus-section-contents-text-title {
+				font-size: 2.6rem;
+			}
+
+			.aboutus-section-contents-text-contains {
+				font-size: 1.8rem;
+			}
+		}
+	}
+
+	.offers-section {
+		.offers-section-boxs-box {
+			width: 280px;
+			height: 390px;
+
+			.offers-section-boxs-box-title {
+				.offers-section-boxs-box-title-name {
+					font-size: 3rem;
+				}
+
+				.offers-section-boxs-box-title-price {
+					font-size: 4rem;
+				}
+			}
+
+			.offers-section-boxs-box-option {
+				font-size: 2rem;
+
+				.offers-section-boxs-box-option-button {
+					&-choose {
+						font-size: 2rem;
+					}
+				}
+			}
+		}
+	}
+
+	.contact-section {
+		.contact-section-data {
+			.contact-section-data-map {
+				iframe {
+					width: 600px;
+					height: 300px;
+				}
+			}
+		}
+	}
+
+	.footer-section {
+		.footer-section-links {
+			display: flex;
+			flex-direction: row;
+			.footer-section-links-link {
+				padding: 2rem;
+				.footer-section-links-link-title {
+					font-size: 2.2rem;
+				}
+
+				.footer-section-links-link-contains a {
+					font-size: 1.6rem;
+				}
+			}
+		}
+
+		.footer-section-logo {
+			font-size: 3rem;
+		}
+		.footer-section-text {
+			font-size: 1.4rem;
+		}
+	}
+}

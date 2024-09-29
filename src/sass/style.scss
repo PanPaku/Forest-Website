@@ -1,0 +1,376 @@
+@use './colors' as *;
+@use './components' as *;
+@use './mixins' as *;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	scroll-padding-top: 79px;
+}
+
+body {
+	font-family: 'Open Sans';
+}
+
+.hero-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: -1;
+}
+
+@include burgerBtn;
+
+.mobile {
+	display: none;
+}
+
+.nav-section-navigation-desktop {
+	display: none;
+}
+
+.nav-section {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	background-color: $white;
+	z-index: 100;
+
+	.nav-section-logo {
+		font-size: 3rem;
+		padding: 1rem 2rem;
+		color: $light-dark;
+
+		i {
+			padding-right: 5px;
+		}
+	}
+
+	.nav-section-navigation-mobile {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: $white;
+		z-index: 10;
+
+		.nav-section-navigation-mobile-hyperlink {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			height: 100%;
+		}
+
+		a {
+			font-size: 2.2rem;
+			text-decoration: none;
+			color: $black;
+			padding: 20px 20px;
+		}
+
+		a:hover {
+			background-color: $black;
+			color: $white;
+		}
+	}
+}
+
+.header-section {
+	position: relative;
+	background-image: url('../img/jungle.jpg');
+	height: 400px;
+	padding-top: 80px;
+	background-size: cover;
+	background-position: center;
+	z-index: 0;
+
+	.header-section-text {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		height: 100%;
+		padding-left: 2em;
+		color: $white;
+
+		.header-section-text-business {
+			font-weight: 300;
+			font-size: 2.4rem;
+		}
+
+		.header-section-text-title {
+			font-size: 3rem;
+		}
+	}
+}
+
+.aboutus-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	.aboutus-section-contents {
+		max-width: 1200px;
+		margin: 0 auto;
+
+		.aboutus-section-contents-img {
+			background-image: url('../img/waters.jpg');
+			width: 95%;
+			height: 200px;
+			background-position: center;
+			background-size: cover;
+			margin: 0 auto;
+		}
+
+		.aboutus-section-contents-text {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			width: 95%;
+			margin: 0 auto;
+			padding-top: 3rem;
+
+			.aboutus-section-contents-text-title {
+				padding-bottom: 1rem;
+				font-size: 2rem;
+			}
+
+			.aboutus-section-contents-text-contains {
+				padding: 1rem 2rem;
+				font-size: 1.4rem;
+				font-weight: 300;
+				line-height: 1.8em;
+				color: $dark-gray;
+			}
+		}
+	}
+
+	.aboutus-section-bottom-img {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 3rem;
+		background-image: url('../img/girl.jpg');
+		width: 95%;
+		height: 200px;
+		background-position: center;
+		z-index: 5;
+
+		.aboutus-section-bottom-img-text {
+			padding: 1rem 2rem;
+			border: 1px solid $white;
+			color: $white;
+		}
+	}
+}
+
+.offers-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	.offers-section-title-text {
+		text-align: center;
+		font-size: 1.6rem;
+		margin-bottom: 3rem;
+	}
+
+	.offers-section-boxs {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		.offers-section-boxs-box {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			width: 260px;
+			height: 370px;
+			border: 1px solid $light-gray;
+			border-radius: 8px;
+			box-shadow: 8px 8px 24px 0px $gray;
+			padding: 4rem 3rem;
+			margin: 2rem;
+
+			.offers-section-boxs-box-title {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+
+				.offers-section-boxs-box-title-name {
+					font-size: 2.2rem;
+					font-weight: 300;
+					padding-bottom: 1.6rem;
+				}
+
+				.offers-section-boxs-box-title-price {
+					font-size: 3rem;
+					padding-bottom: 1.4rem;
+				}
+			}
+
+			.offers-section-boxs-box-option {
+				font-size: 1.6rem;
+
+				i {
+					padding: 0.8rem 0 0.8rem 0;
+				}
+
+				.offers-section-boxs-box-option-minus {
+					color: $dark-gray;
+				}
+
+				.offers-section-boxs-box-option-button {
+					display: flex;
+					justify-content: center;
+
+					.offers-section-boxs-box-option-button-choose {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 180px;
+						height: 30px;
+						margin-top: 3rem;
+						font-size: 1.6rem;
+						border: none;
+						border-radius: 8px;
+						color: $black;
+						transition: background-color 0.3s;
+						cursor: pointer;
+					}
+
+					.button1:hover,
+					.button3:hover {
+						background-color: $light-gray;
+					}
+
+					.button2:hover {
+						background-color: $dark-green;
+					}
+
+					.button1,
+					.button3 {
+						background: none;
+						box-shadow: 0px 2px 5px 0px $gray;
+					}
+
+					.button2 {
+						background-color: $green;
+						box-shadow: 0px 2px 5px 0px $gray;
+					}
+				}
+			}
+		}
+	}
+
+	.offers-section-hyperlink {
+		display: flex;
+		justify-content: center;
+		font-size: 2.2rem;
+
+		.offers-section-hyperlink-button {
+			width: 30rem;
+			height: 4rem;
+			margin-top: 2rem;
+			font-size: 2rem;
+			background-color: $white;
+			border-radius: 8px;
+			border: none;
+			box-shadow: 0px 2px 5px 0px $gray;
+			color: $black;
+
+			a {
+				text-decoration: none;
+			}
+
+			i {
+				margin-left: 0.6rem;
+			}
+		}
+	}
+}
+
+.footer-section {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-color: $light-gray;
+	width: 100%;
+	margin-top: 5em;
+
+	.footer-section-links {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		padding-top: 2rem;
+
+		.footer-section-links-link {
+			display: flex;
+			text-align: center;
+			flex-direction: column;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+
+			.footer-section-links-link-contains {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.footer-section-links-link-title {
+				font-size: 2rem;
+			}
+
+			a {
+				text-decoration: none;
+				color: $gray;
+				font-size: 1.6rem;
+				padding: 1.2rem;
+				transition: color 0.3s;
+			}
+
+			a:hover {
+				color: $light-dark;
+			}
+		}
+	}
+
+	.footer-section-logo {
+		color: $light-dark;
+		font-size: 2.4rem;
+		padding: 4rem;
+	}
+
+	hr {
+		width: 100%;
+	}
+
+	.footer-section-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem;
+		font-size: 1.2rem;
+		height: 100%;
+	}
+}
+
+@import './medium';
+@import './large';

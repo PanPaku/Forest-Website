@@ -1,0 +1,57 @@
+@use './colors' as *;
+
+@mixin burgerBtn {
+	.burger-btn {
+		position: fixed;
+		top: 15px;
+		right: 20px;
+		padding: 1em;
+		background: none;
+		border: 1px solid transparent;
+		cursor: pointer;
+		z-index: 1000;
+	}
+
+	.burger-btn:focus {
+		outline: none;
+		border: 1px solid $black;
+		border-radius: 8px;
+	}
+
+	.burger-btn:hover .burger-bars::after,
+	.burger-btn:hover .burger-bars::before {
+		width: 100%;
+	}
+
+	.burger-box {
+		position: relative;
+		width: 40px;
+		height: 30px;
+	}
+
+	.burger-bars,
+	.burger-bars::after,
+	.burger-bars::before {
+		position: absolute;
+		right: 0;
+		height: 3px;
+		content: '';
+		background-color: $black;
+		transition: width 0.3s;
+	}
+
+	.burger-bars {
+		width: 100%;
+	}
+
+	.burger-bars::after {
+		top: 13px;
+		width: 60%;
+	}
+
+	.burger-bars::before {
+		top: 27px;
+		width: 30%;
+		transition-delay: 0.1s;
+	}
+}

@@ -1,0 +1,172 @@
+@use './components' as *;
+@use './colors' as *;
+
+@media (min-width: 992px) {
+	.header-section {
+		padding-left: 12em;
+		background-image: url('../img/jungle-hq.jpg');
+	}
+
+	.section-heading {
+		margin-top: 1.8em;
+		margin-bottom: 1.8em;
+		font-size: 4rem;
+	}
+
+	.nav-section-navigation-mobile {
+		display: none;
+	}
+
+	.burger-btn {
+		display: none;
+	}
+
+	.nav-section {
+		display: flex;
+		justify-content: space-around;
+		min-width: 100%;
+		position: fixed;
+		z-index: 1000;
+		background-color: $white;
+	}
+
+	.nav-section-navigation-desktop {
+		display: block;
+
+		.nav-section-navigation-desktop-hyperlink {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+
+			a {
+				display: flex;
+				justify-content: center;
+				text-decoration: none;
+				width: 120px;
+				padding: 3rem 3rem;
+				font-size: 1.6rem;
+				color: $black;
+			}
+
+			a:hover {
+				background-color: $black;
+				color: $white;
+			}
+		}
+	}
+
+	.aboutus-section {
+		.aboutus-section-contents {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-bottom: 5rem;
+		}
+		.aboutus-section-contents-img {
+			background-image: url('../img/waters-hq.jpg');
+			height: 300px;
+		}
+		.aboutus-section-contents-text {
+			padding-left: 5rem;
+
+			.aboutus-section-contents-text-title {
+				font-size: 3rem;
+			}
+
+			.aboutus-section-contents-text-contains {
+				font-size: 2rem;
+			}
+		}
+
+		.aboutus-section-bottom-img {
+			background-image: url('../img/girl-hq.jpg');
+			width: 100%;
+			height: 350px;
+
+			.aboutus-section-bottom-img-text {
+				font-size: 3rem;
+				padding: 3rem 10em;
+			}
+		}
+	}
+
+	.offers-section {
+		.offers-section-title-text {
+			font-size: 2.4rem;
+		}
+
+		.offers-section-boxs {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+
+			.offers-section-boxs-box {
+				width: 350px;
+				height: 440px;
+				margin-bottom: 8rem;
+
+				.offers-section-boxs-box-title {
+					.offers-section-boxs-box-title-name {
+						font-size: 3rem;
+					}
+
+					.offers-section-boxs-box-title-price {
+						font-size: 4rem;
+					}
+				}
+
+				.offers-section-boxs-box-option {
+					font-size: 2.2rem;
+
+					.offers-section-boxs-box-option-button-choose {
+						font-size: 2rem;
+						width: 200px;
+					}
+				}
+			}
+		}
+	}
+
+	.contact-section {
+		.contact-section-data {
+			flex-direction: row;
+
+			.contact-section-data-input-box {
+				padding-right: 5rem;
+			}
+
+			.contact-section-data-map {
+				padding-left: 5rem;
+
+				iframe {
+					width: 600px;
+					height: 350px;
+				}
+			}
+		}
+	}
+
+	.footer-section {
+		.footer-section-links {
+			.footer-section-links-link {
+				padding: 3rem;
+				.footer-section-links-link-title {
+					font-size: 2.2rem;
+				}
+
+				.footer-section-links-link-contains a {
+					font-size: 2rem;
+				}
+			}
+		}
+		.footer-section-logo {
+			font-size: 3.4rem;
+		}
+
+		.footer-section-text {
+			font-size: 1.6rem;
+		}
+	}
+}
